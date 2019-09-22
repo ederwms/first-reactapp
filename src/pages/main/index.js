@@ -34,7 +34,7 @@ export default class Main extends Component {
     const pageNumber = page - 1
     this.loadProducts(pageNumber)
   }
-
+  //* next page method
   nextPage = () => {
     const { page, productInfo } = this.state
     if (page === productInfo.pages) return
