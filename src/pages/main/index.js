@@ -45,23 +45,39 @@ export default class Main extends Component {
 
   render() {
     const { products, page, productInfo } = this.state
-    return (
-      <div className="product-list">
-        { products.map((product) => (
-          <article key={product._id}>
-            <strong> { product.title } </strong>
-            <p> { product.description } </p>
-            <Link to={`/products/${product._id}`}> Acessar </Link>
-          </article>
-        )) }
-        <div className="actions">
-          <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-          <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próxima</button>
+    if (products.length === 0) {
+      return (
+        <div>
+          <h2>Não existem produtos cadastrados</h2>
+          <footer id="main-footer">
+            <Link to={`/newproduct`}> Cadastrar novo </Link>
+          </footer>
         </div>
-        <div className="pages-info">
-          <strong>Página {page} de {productInfo.pages}</strong>
+      )
+    } else {
+      return (
+        <div>
+          <div className="product-list">
+            { products.map((product) => (
+              <article key={product._id}>
+                <strong> { product.title } </strong>
+                <p> { product.description } </p>
+                <Link to={`/products/${product._id}`}> Detalhes </Link>
+              </article>
+            )) }
+            <div className="actions">
+              <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+              <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próxima</button>
+            </div>
+            <div className="pages-info">
+              <strong>Página {page} de {productInfo.pages}</strong>
+            </div>
+          </div>
+          <footer id="main-footer">
+            <Link to={`/newproduct`}> Cadastrar novo </Link>
+          </footer>
         </div>
-      </div>
-    )
+      )
+    }
   }
 }

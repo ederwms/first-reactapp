@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import api from '../../services/api'
 import './style.css'
@@ -19,6 +20,7 @@ export default class Product extends Component {
     const { product } = this.state
     return (
       <div className="product-info">
+        <Link className="edit-product" to={`/editproduct/${product._id}`}>Editar</Link>
         <h1> { product.title } </h1>
         <p> { product.description } </p>
         <p>

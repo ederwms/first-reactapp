@@ -1,0 +1,78 @@
+.container {
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.container h3 {
+  margin: 20px 0;
+}
+
+.product-edit {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-edit form {
+  width: 100%;
+}
+
+.product-edit form label {
+  display: block;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.product-edit form input {
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.product-edit form button {
+  height: 42px;
+  border-radius: 5px;
+  border: 1px solid #da552f;
+  background: none;
+  color: #da552f;
+  margin-top: 15px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.product-edit form button:hover {
+  background: #da552f;
+  color: #fff;
+}
+
+/* .edit-product {
+  float: right;
+  padding: 10px;
+  border: 1px solid #da552f;
+  border-radius: 5px;
+  color: #da552f;
+  font-weight: bold;
+  background: none;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.edit-product:hover {
+  color: #fff;
+  background: #da552f;
+} */

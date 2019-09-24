@@ -20,3 +20,20 @@
 .product-info p a {
   color: #069;
 }
+
+.edit-product {
+  float: right;
+  padding: 10px;
+  border: 1px solid #da552f;
+  border-radius: 5px;
+  color: #da552f;
+  font-weight: bold;
+  background: none;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.edit-product:hover {
+  color: #fff;
+  background: #da552f;
+}
