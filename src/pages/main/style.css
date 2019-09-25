@@ -40,6 +40,24 @@
   color: #fff;
 }
 
+.product-list article button.delete-product {
+  float: right;
+  padding: 7px 10px;
+  border: 1px solid #da552f;
+  border-radius: 5px;
+  color: #da552f;
+  font-weight: bold;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-list article button.delete-product:hover {
+  color: #fff;
+  background: #da552f;
+}
+
 .product-list .actions {
   display: flex;
   justify-content: space-between;

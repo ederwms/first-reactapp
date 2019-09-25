@@ -43,6 +43,12 @@ export default class Main extends Component {
     this.loadProducts(pageNumber)
   }
 
+  deleteProduct = async (id) => {
+    await api.delete(`/products/${id}`)
+    this.loadProducts()
+  }
+
+
   render() {
     const { products, page, productInfo } = this.state
     if (products.length === 0) {
@@ -60,6 +66,7 @@ export default class Main extends Component {
           <div className="product-list">
             { products.map((product) => (
               <article key={product._id}>
+                <button className="delete-product" onClick={() => {this.deleteProduct(product._id)}} title="Excluir produto">X</button>
                 <strong> { product.title } </strong>
                 <p> { product.description } </p>
                 <Link to={`/products/${product._id}`}> Detalhes </Link>
